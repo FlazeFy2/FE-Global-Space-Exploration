@@ -3,6 +3,7 @@
   import O_TableComponent from "@/components/organisms/O_TableComponent.vue"
   import { readBody, readHeader } from "@/utils/data_prepare";
   import { onMounted, ref } from "vue";
+  import M_DescriptiveStatistic from "@/components/molecules/M_DescriptiveStatistic.vue"
 
   const header_dataset = ref([])
   const body_dataset = ref([])
@@ -66,7 +67,18 @@
 
       <div class="accordion-item">
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          
+          <A_TextComponent second_title="Descriptive Statistic" />
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+              <M_DescriptiveStatistic target_col="Budget (in Billion $)"/>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+              <M_DescriptiveStatistic target_col="Success Rate (%)"/>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+              <M_DescriptiveStatistic target_col="Duration (in Days)"/>
+            </div>
+          </div>
         </div>
       </div>
 
