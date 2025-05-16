@@ -5,6 +5,7 @@
   import { onMounted, ref } from "vue";
   import M_DescriptiveStatistic from "@/components/molecules/M_DescriptiveStatistic.vue"
   import ShowPieChart from "@/components/usecases/ShowPieChart.vue"
+  import TotalMissionPerYear from "@/components/usecases/TotalMissionPerYear.vue"
 
   const header_dataset = ref([])
   const body_dataset = ref([])
@@ -53,7 +54,7 @@
     <div class="d-flex justify-content-start mt-3">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Dataset</button>
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Descriptive Statistic</button>
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Tree Map</button>
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Line Map</button>
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Pie Chart</button>
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Column Chart</button>
     </div>
@@ -85,20 +86,21 @@
 
       <div class="accordion-item">
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          
+          <A_TextComponent second_title="Pie Chart" />
+          <TotalMissionPerYear/>
         </div>
       </div>
 
       <div class="accordion-item">
         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <A_TextComponent second_title="Pie Chart" />
+          <A_TextComponent second_title="Line Chart" />
           <ShowPieChart/>
         </div>
       </div>
 
       <div class="accordion-item">
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-         
+
         </div>
       </div>
     </div>
