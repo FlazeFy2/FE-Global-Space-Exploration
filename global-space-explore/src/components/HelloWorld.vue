@@ -6,6 +6,7 @@
   import M_DescriptiveStatistic from "@/components/molecules/M_DescriptiveStatistic.vue"
   import ShowPieChart from "@/components/usecases/ShowPieChart.vue"
   import TotalMissionPerYear from "@/components/usecases/TotalMissionPerYear.vue"
+import TotalSpendingPerYear from "./usecases/TotalSpendingPerYear.vue";
 
   const header_dataset = ref([])
   const body_dataset = ref([])
@@ -86,8 +87,10 @@
 
       <div class="accordion-item">
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <A_TextComponent second_title="Pie Chart" />
+          <A_TextComponent third_title="Total Mission Per Year"/>
           <TotalMissionPerYear/>
+          <A_TextComponent third_title="Total Budget Spending (in Billion $) Per Year"/>
+          <TotalSpendingPerYear/>
         </div>
       </div>
 
