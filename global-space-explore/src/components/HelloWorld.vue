@@ -8,6 +8,7 @@
   import TotalMissionPerYear from "@/components/usecases/TotalMissionPerYear.vue"
   import TotalSpendingPerYear from "./usecases/TotalSpendingPerYear.vue";
   import TotalMissionPerGroupAndContext from "./usecases/TotalMissionPerGroupAndContext.vue";
+  import TotalMostUsed from "./usecases/TotalMostUsed.vue";
 
   const header_dataset = ref([])
   const body_dataset = ref([])
@@ -104,20 +105,48 @@
 
       <div class="accordion-item">
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <!-- Exploratory Data Analysis (EDA) - Stacked Bar Chart Total Mission Per Mission Type By Its Sattelite Type -->
           <A_TextComponent second_title="Column Chart" />
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
+              <!-- Exploratory Data Analysis (EDA) - Stacked Bar Chart Total Mission Per Mission Type By Its Sattelite Type -->
               <TotalMissionPerGroupAndContext
-                second_title="Total Purchase Item Per Mission Type  By Its Satellite Type" 
-                content="This chart shows the total purchase item group by its mission type  and satellite type"
+                second_title="Total Mission Per Mission Type By Its Satellite Type" 
+                content="This chart shows the total mission group by its mission type and satellite type"
                 count_col="Satellite Type"
-                group_col="Mission Type "
+                group_col="Mission Type"
                 limit=7
               />
             </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <!-- Exploratory Data Analysis (EDA) - Stacked Bar Chart Total Mission Per Technology Used By Its Satellite Type -->
+              <TotalMissionPerGroupAndContext
+                second_title="Total Mission Per Technology Used By Its Satellite Type" 
+                content="This chart shows the total mission group by its technology used and satellite type"
+                count_col="Satellite Type"
+                group_col="Technology Used"
+                limit=7
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <!-- Exploratory Data Analysis (EDA) - Stacked Bar Chart Total Mission Per Environmental Impact By Its Satellite Type -->
+              <TotalMissionPerGroupAndContext
+                second_title="Total Mission Per Environmental Impact By Its Satellite Type" 
+                content="This chart shows the total mission group by its environmental impact and satellite type"
+                count_col="Satellite Type"
+                group_col="Environmental Impact"
+                limit=7
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <!-- Exploratory Data Analysis (EDA) - Bar Chart Most Used Launch Site -->
+              <TotalMostUsed
+                second_title="Most Used Launch Site" 
+                content="This chart shows the total mission by its most used launch site"
+                count_col="Launch Site"
+                limit=10
+              />
+            </div>
           </div>
-          
         </div>
       </div>
     </div>
