@@ -6,7 +6,8 @@
   import M_DescriptiveStatistic from "@/components/molecules/M_DescriptiveStatistic.vue"
   import ShowPieChart from "@/components/usecases/ShowPieChart.vue"
   import TotalMissionPerYear from "@/components/usecases/TotalMissionPerYear.vue"
-import TotalSpendingPerYear from "./usecases/TotalSpendingPerYear.vue";
+  import TotalSpendingPerYear from "./usecases/TotalSpendingPerYear.vue";
+  import TotalMissionPerGroupAndContext from "./usecases/TotalMissionPerGroupAndContext.vue";
 
   const header_dataset = ref([])
   const body_dataset = ref([])
@@ -103,7 +104,20 @@ import TotalSpendingPerYear from "./usecases/TotalSpendingPerYear.vue";
 
       <div class="accordion-item">
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-
+          <!-- Exploratory Data Analysis (EDA) - Stacked Bar Chart Total Mission Per Mission Type By Its Sattelite Type -->
+          <A_TextComponent second_title="Column Chart" />
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <TotalMissionPerGroupAndContext
+                second_title="Total Purchase Item Per Mission Type  By Its Satellite Type" 
+                content="This chart shows the total purchase item group by its mission type  and satellite type"
+                count_col="Satellite Type"
+                group_col="Mission Type "
+                limit=7
+              />
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
