@@ -9,6 +9,7 @@
   import TotalSpendingPerYear from "./usecases/TotalSpendingPerYear.vue";
   import TotalMissionPerGroupAndContext from "./usecases/TotalMissionPerGroupAndContext.vue";
   import TotalMostUsed from "./usecases/TotalMostUsed.vue";
+  import AverageSuccessRatePerYear from "./usecases/AverageSuccessRatePerYear.vue";
 
   const header_dataset = ref([])
   const body_dataset = ref([])
@@ -89,10 +90,17 @@
 
       <div class="accordion-item">
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <!-- Exploratory Data Analysis (EDA) - Total Mission Per Year -->
           <A_TextComponent third_title="Total Mission Per Year"/>
           <TotalMissionPerYear/>
+
+          <!-- Exploratory Data Analysis (EDA) - Total Budget Spending (in Billion $) Per Year -->
           <A_TextComponent third_title="Total Budget Spending (in Billion $) Per Year"/>
           <TotalSpendingPerYear/>
+
+          <!-- Exploratory Data Analysis (EDA) - Average Success Rate Per Year -->
+          <A_TextComponent third_title="Average Success Rate Per Year"/>
+          <AverageSuccessRatePerYear/>
         </div>
       </div>
 
