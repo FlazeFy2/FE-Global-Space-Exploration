@@ -11,6 +11,7 @@
   import TotalMostUsed from "./usecases/TotalMostUsed.vue";
   import AverageSuccessRatePerYear from "./usecases/AverageSuccessRatePerYear.vue";
   import TotalMissionDurationPerYear from "./usecases/TotalMissionDurationPerYear.vue";
+  import AverageMissionDurationPerYear from "./usecases/AverageMissionDurationPerYear.vue";
 
   const header_dataset = ref([])
   const body_dataset = ref([])
@@ -102,6 +103,10 @@
           <!-- Exploratory Data Analysis (EDA) - Average Success Rate Per Year -->
           <A_TextComponent third_title="Average Success Rate Per Year"/>
           <AverageSuccessRatePerYear/>
+
+          <!-- Exploratory Data Analysis (EDA) - Average Mission Duration Per Year -->
+          <A_TextComponent third_title="Average Mission Duration Per Year"/>
+          <AverageMissionDurationPerYear/>
 
           <!-- Exploratory Data Analysis (EDA) - Total Mission Duration Per Year -->
           <A_TextComponent third_title="Total Mission Duration Per Year"/>
